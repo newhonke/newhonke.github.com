@@ -1,15 +1,3 @@
-let hour = new Date().getHours();
-if(hour === 10 || hour === 15){
-  alert('おやつの時間です！');
-} else if(hour >= 7 && hour < 11){
-  alert('おはようございます！');
-} else if(hour >= 11 && hour <17){
-  alert('こんにちは！');
-} else {
-  alert('こんばんは！');
-}
-
-
 // カラーピッカー
 const text = document.querySelector('#colorText');
 const color = document.querySelector('#colorPicker');
