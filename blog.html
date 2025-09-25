@@ -1,125 +1,110 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8">
-    <title>Keyphoria</title>
-    <meta name="description" content="Keyphoriaはhonkeのブログサイトです">
-    <meta name="viewport" content="width=device-width, initial-scale+1">
-    
-    <!-- ファビコン -->
-    <link rel="icon" href="https://cdn.glitch.global/2ff683db-3ab9-4ff4-942e-1d1e46c57cc3/favicon.ico?v=1730099168783">
-
-    <!-- リセットcss -->
-    <link rel="stylesheet" href="https://unpkg.com/ress@5.0.2/dist/ress.min.css">
-
-    <!-- オリジナルcss -->
-    <link rel="stylesheet" href="css/list.css">
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/js.css">
-    
-    <!-- js -->
-    <script src="../js/blog.js" defer></script>
-    
-    <!-- フォント -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Noto+Serif+JP:wght@500&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Sofia&display=swap" rel="stylesheet">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Noto+Serif+JP:wght@500&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Sofia&display=swap" rel="stylesheet">
+<head>
+  <meta charset="UTF-8">
+  <title>Keyphoria</title>
+  <meta name="description" content="Keyphoriaはhonkeのブログサイトです">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PP9REREZ76"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <link rel="icon" href="https://cdn.glitch.global/2ff683db-3ab9-4ff4-942e-1d1e46c57cc3/favicon.ico?v=1730099168783">
 
-  gtag('config', 'G-PP9REREZ76');
-</script>
-  </head>
-  <body>
-    
-    <div class="body">
-      
-      <nav>
-        <button id="menu-open" class="btn-menu">
+  <link rel="stylesheet" href="https://unpkg.com/ress@5.0.2/dist/ress.min.css">
+
+  <link rel="stylesheet" href="css/list.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/js.css">
+  
+  <script src="js/blog.js" defer></script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Noto+Serif+JP:wght@500&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Sofia&display=swap" rel="stylesheet">
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PP9REREZ76"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PP9REREZ76');
+  </script>
+</head>
+
+<body>
+  <div class="body">
+    <nav>
+      <button id="menu-open" class="btn-menu">
+        <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <title>メニューを開く</title>
+          <path clip-rule="evenodd" d="m4.25 8c0-.41421.33579-.75.75-.75h14c.4142 0 .75.33579.75.75s-.3358.75-.75.75h-14c-.41421 0-.75-.33579-.75-.75zm0 4c0-.4142.33579-.75.75-.75h14c.4142 0 .75.3358.75.75s-.3358.75-.75.75h-14c-.41421 0-.75-.3358-.75-.75zm.75 3.25c-.41421 0-.75.3358-.75.75s.33579.75.75.75h14c.4142 0 .75-.3358.75-.75s-.3358-.75-.75-.75z" fill-rule="evenodd"/>
+        </svg>
+      </button>
+      <div id="menu-panel">
+        <button id="menu-close" class="btn-menu">
           <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-            <title>メニューを開く</title>
-            <path clip-rule="evenodd" d="m4.25 8c0-.41421.33579-.75.75-.75h14c.4142 0 .75.33579.75.75s-.3358.75-.75.75h-14c-.41421 0-.75-.33579-.75-.75zm0 4c0-.4142.33579-.75.75-.75h14c.4142 0 .75.3358.75.75s-.3358.75-.75.75h-14c-.41421 0-.75-.3358-.75-.75zm.75 3.25c-.41421 0-.75.3358-.75.75s.33579.75.75.75h14c.4142 0 .75-.3358.75-.75s-.3358-.75-.75-.75z" fill-rule="evenodd"/>
+            <title>メニューを閉じる</title>
+            <path clip-rule="evenodd" d="m7.53033 6.46967c-.29289-.29289-.76777-.29289-1.06066 0s-.29289.76777 0 1.06066l4.46963 4.46967-4.46963 4.4697c-.29289.2929-.29289.7677 0 1.0606s.76777.2929 1.06066 0l4.46967-4.4696 4.4697 4.4696c.2929.2929.7677.2929 1.0606 0s.2929-.7677 0-1.0606l-4.4696-4.4697 4.4696-4.46967c.2929-.29289.2929-.76777 0-1.06066s-.7677-.29289-1.0606 0l-4.4697 4.46963z" fill-rule="evenodd"/>
           </svg>
         </button>
-        <div id="menu-panel">
-          <button id="menu-close" class="btn-menu">
-            <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-              <title>メニューを閉じる</title>
-              <path clip-rule="evenodd" d="m7.53033 6.46967c-.29289-.29289-.76777-.29289-1.06066 0s-.29289.76777 0 1.06066l4.46963 4.46967-4.46963 4.4697c-.29289.2929-.29289.7677 0 1.0606s.76777.2929 1.06066 0l4.46967-4.4696 4.4697 4.4696c.2929.2929.7677.2929 1.0606 0s.2929-.7677 0-1.0606l-4.4696-4.4697 4.4696-4.46967c.2929-.29289.2929-.76777 0-1.06066s-.7677-.29289-1.0606 0l-4.4697 4.46963z" fill-rule="evenodd"/>
-            </svg>
-          </button>
-          <ul class="menu-list">
-            <li><a href="index.html">about</a></li>
-            <li><a href="blog.html">blog</a></li>
-            <li><a href="sns.html">sns</a></li>
-            <li><a href="others.html">others</a></li>
-          </ul>
-        </div>
-      </nav>
-      
-      
-      <div class="header">
-        <header class="header-page">
-          <a href="index.html"><img class="logo" src="https://cdn.glitch.global/4b845364-05f4-4a43-ae4d-80d19c646eed/JCqfiDiKX1te6GN1730533765_1730533773.png?v=1730533839925" alt="Keyphoriaのロゴ"></a>
-          <div class="count"> 
-            <img src="https://www.f-counter.net/j/64/1732864443/" alt="アクセスカウンター"><br><p>↑この人数がサイトを訪問しました↑</p>
-          </div>
-        </header>
-      </div>
-      
-      <main>
-        <h3 class="font-english blogdaimei" id="blog">blog</h3>
-        <ul>
-          <li class="bloglist blog"><a href="blog/blog1.html" class="blogtitle">2024/10/31 ちんこ音頭</a></li>
-          <li class="bloglist blog"><a href="blog/blog2.html" class="blogtitle">2024/11/01 学校を休んだよって話</a></li>
-          <li class="bloglist blog"><a href="blog/blog3.html" class="blogtitle">2024/11/02 JavaScript不足</a></li>
-          <li class="bloglist blog"><a href="blog/blog4.html" class="blogtitle">2024/11/03 本買ったよ</a></li>
-          <li class="bloglist blog"><a href="blog/blog5.html" class="blogtitle">2024/11/04 大物YouTube r </a></li>
-          <li class="bloglist blog"><a href="blog/blog6.html" class="blogtitle">2024/11/05 次何をアップデートしようかなって話</a></li>
-          <li class="bloglist blog"><a href="blog/blog7.html" class="blogtitle">2024/11/06 俺頭悪すぎだろ</a></li>
-          <li class="bloglist blog"><a href="blog/blog8.html" class="blogtitle">2024/11/08 【考察】最近目が痒い</a></li>
-          <li class="bloglist blog"><a href="blog/blog9.html" class="blogtitle">2024/11/10 ブックマークレットってもんがあるんやね。</a></li>
-          <li class="bloglist blog"><a href="blog/blog91.html" class="blogtitle">2024/11/11 クッキークリッカーおもろい</a></li>
-          <li class="bloglist blog"><a href="blog/blog92.html" class="blogtitle">2024/11/12 ワイ不登校、塾の体験に行くことになる</a></li>
-          <li class="bloglist blog"><a href="blog/blog93.html" class="blogtitle">2024/11/13 なんで？？</a></li>
-          <li class="bloglist blog"><a href="blog/blog94.html" class="blogtitle">2024/11/17 本買ったよ2</a></li>
-          <li class="bloglist blog"><a href="blog/blog95.html" class="blogtitle">2024/11/19 某広告詐欺ゲーを興味半分でやってみたら</a></li>
-          <li class="bloglist blog"><a href="blog/blog96.html" class="blogtitle">2024/11/22 ワイ将、塾の説明会にイク</a></li>
-          <li class="bloglist blog"><a href="blog/blog97.html" class="blogtitle">2024/11/23 個人的エナドリ王決定戦</a></li>
-          <li class="bloglist blog"><a href="blog/blog98.html" class="blogtitle">2024/11/26 ワイ、IQが判明する</a></li>
-          <li class="bloglist blog"><a href="blog/blog99.html" class="blogtitle">2024/11/27 不登校、塾の体験にイク</a></li>
-          <li class="bloglist blog"><a href="blog/blog990.html" class="blogtitle">2024/11/30 にゃんぷ祭りだね</a></li>
-          <li class="bloglist blog"><a href="blog/blog991.html" class="blogtitle">2024/12/01 にゃんぷ祭りだね2</a></li>
-          <li class="bloglist blog"><a href="blog/blog992.html" class="blogtitle">2024/12/04 なんか作ろう</a></li>
-          <li class="bloglist blog"><a href="blog/blog993.html" class="blogtitle">2024/12/09 ナガシマに行ったよ</a></li>
-          <li class="bloglist blog"><a href="blog/blog994.html" class="blogtitle">2024/12/11 glitchをしってますか❓</a></li>
-          <li class="bloglist blog"><a href="blog/blog995.html" class="blogtitle">2024/12/16 性癖のお話</a></li>
-          <li class="bloglist blog"><a href="blog/blog996.html" class="blogtitle">2024/12/18 JavaScript1ヶ月半ほど学んだので反省会開こうと思います</a></li>
-          <li class="bloglist blog"><a href="blog/blog997.html" class="blogtitle">2024/12/23最近の生活がやばい</a></li>
-          <li class="bloglist blog"><a href="blog/blog998.html" class="blogtitle">2024/1/1 あけましておめw</a></li>
-          <li class="bloglist blog"><a href="blog/blog999.html" class="blogtitle">2024/1/6 3日だけ続いたゲームの話</a></li>
-          <li class="bloglist blog"><a href="blog/blog9990.html" class="blogtitle">2024/1/18 ブログの書く内容がない</a></li>
-          <li class="bloglist blog"><a href="blog/blog9991.html" class="blogtitle">2024/1/28 身内サーバーを建てさせた話</a></li>
+        <ul class="menu-list">
+          <li><a href="index.html">about</a></li>
+          <li><a href="blog.html">blog</a></li>
+          <li><a href="sns.html">sns</a></li>
+          <li><a href="others.html">others</a></li>
         </ul>
-      </main>
-      
-      <footer>
-        <div class="copyright">
-          <small>&copy; 2024 Keyphoria</small>
-        </div>
-      </footer>
-      
-    </div>
-    <!--<a rel="me" href="https://handon.club/@honke">Mastodon</a> -->
+      </div>
+    </nav>
+    
+    <header class="header-page">
+      <a href="index.html"><img class="logo" src="https://cdn.glitch.global/4b845364-05f4-4a43-ae4d-80d19c646eed/JCqfiDiKX1te6GN1730533765_1730533773.png?v=1730533839925" alt="Keyphoriaのロゴ"></a>
+      <div class="count"> 
+        <img src="https://www.f-counter.net/j/64/1732864443/" alt="アクセスカウンター"><br><p>↑この人数がサイトを訪問しました↑</p>
+      </div>
+    </header>
+    
+    <main>
+      <h2 class="font-english blogdaimei" id="blog">blog</h2>
+      <ul>
+        <li class="bloglist blog"><a href="blog/blog1.html" class="blogtitle">2024/10/31 ちんこ音頭</a></li>
+        <li class="bloglist blog"><a href="blog/blog2.html" class="blogtitle">2024/11/01 学校を休んだよって話</a></li>
+        <li class="bloglist blog"><a href="blog/blog3.html" class="blogtitle">2024/11/02 JavaScript不足</a></li>
+        <li class="bloglist blog"><a href="blog/blog4.html" class="blogtitle">2024/11/03 本買ったよ</a></li>
+        <li class="bloglist blog"><a href="blog/blog5.html" class="blogtitle">2024/11/04 大物YouTube r </a></li>
+        <li class="bloglist blog"><a href="blog/blog6.html" class="blogtitle">2024/11/05 次何をアップデートしようかなって話</a></li>
+        <li class="bloglist blog"><a href="blog/blog7.html" class="blogtitle">2024/11/06 俺頭悪すぎだろ</a></li>
+        <li class="bloglist blog"><a href="blog/blog8.html" class="blogtitle">2024/11/08 【考察】最近目が痒い</a></li>
+        <li class="bloglist blog"><a href="blog/blog9.html" class="blogtitle">2024/11/10 ブックマークレットってもんがあるんやね。</a></li>
+        <li class="bloglist blog"><a href="blog/blog91.html" class="blogtitle">2024/11/11 クッキークリッカーおもろい</a></li>
+        <li class="bloglist blog"><a href="blog/blog92.html" class="blogtitle">2024/11/12 ワイ不登校、塾の体験に行くことになる</a></li>
+        <li class="bloglist blog"><a href="blog/blog93.html" class="blogtitle">2024/11/13 なんで？？</a></li>
+        <li class="bloglist blog"><a href="blog/blog94.html" class="blogtitle">2024/11/17 本買ったよ2</a></li>
+        <li class="bloglist blog"><a href="blog/blog95.html" class="blogtitle">2024/11/19 某広告詐欺ゲーを興味半分でやってみたら</a></li>
+        <li class="bloglist blog"><a href="blog/blog96.html" class="blogtitle">2024/11/22 ワイ将、塾の説明会にイク</a></li>
+        <li class="bloglist blog"><a href="blog/blog97.html" class="blogtitle">2024/11/23 個人的エナドリ王決定戦</a></li>
+        <li class="bloglist blog"><a href="blog/blog98.html" class="blogtitle">2024/11/26 ワイ、IQが判明する</a></li>
+        <li class="bloglist blog"><a href="blog/blog99.html" class="blogtitle">2024/11/27 不登校、塾の体験にイク</a></li>
+        <li class="bloglist blog"><a href="blog/blog990.html" class="blogtitle">2024/11/30 にゃんぷ祭りだね</a></li>
+        <li class="bloglist blog"><a href="blog/blog991.html" class="blogtitle">2024/12/01 にゃんぷ祭りだね2</a></li>
+        <li class="bloglist blog"><a href="blog/blog992.html" class="blogtitle">2024/12/04 なんか作ろう</a></li>
+        <li class="bloglist blog"><a href="blog/blog993.html" class="blogtitle">2024/12/09 ナガシマに行ったよ</a></li>
+        <li class="bloglist blog"><a href="blog/blog994.html" class="blogtitle">2024/12/11 glitchをしってますか❓</a></li>
+        <li class="bloglist blog"><a href="blog/blog995.html" class="blogtitle">2024/12/16 性癖のお話</a></li>
+        <li class="bloglist blog"><a href="blog/blog996.html" class="blogtitle">2024/12/18 JavaScript1ヶ月半ほど学んだので反省会開こうと思います</a></li>
+        <li class="bloglist blog"><a href="blog/blog997.html" class="blogtitle">2024/12/23最近の生活がやばい</a></li>
+        <li class="bloglist blog"><a href="blog/blog998.html" class="blogtitle">2024/1/1 あけましておめw</a></li>
+        <li class="bloglist blog"><a href="blog/blog999.html" class="blogtitle">2024/1/6 3日だけ続いたゲームの話</a></li>
+        <li class="bloglist blog"><a href="blog/blog9990.html" class="blogtitle">2024/1/18 ブログの書く内容がない</a></li>
+        <li class="bloglist blog"><a href="blog/blog9991.html" class="blogtitle">2024/1/28 身内サーバーを建てさせた話</a></li>
+      </ul>
+    </main>
+    
+    <footer>
+      <div class="copyright">
+        <small>&copy; 2024 Keyphoria</small>
+      </div>
+    </footer>
+    
+  </div>
   </body>
 </html>
