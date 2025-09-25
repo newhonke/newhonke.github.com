@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+.accountlist {
+  list-style-type: none;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 1rem 3rem 0 3rem; 
+}
+
+.account {
+  font-size: 2rem; 
+  font-family: "Montserrat Underline", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.snsdaimei {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.snslist{
+  margin-bottom: 2rem;
+}

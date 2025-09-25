@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+/* ブログ */
+
+.blogdaimei {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.bloglist {
+  font-size: 1.5rem;
+  text-align: center;
+  list-style-type: none;
+  border-bottom: 1px dashed #ffffff;
+  margin: 1rem 3rem 0 3rem;
+}
+
+.blogtitle {
+  text-decoration: none;
+  display: block;
+  color: #ffffff;
+}
+main {
+  margin-bottom: 5rem;
+}

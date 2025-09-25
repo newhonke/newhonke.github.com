@@ -1,0 +1,111 @@
+@charset "UTF-8";
+:root {
+    --light-green: #d5edeb;
+    --green: #63dbd0;
+    --brown: #403632;
+    --light-grey: #eee;
+    --white: #fff;
+    --oswald-font: 'Oswald', sans-serif;
+}
+
+/* js カラーピッカー */
+aside {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding-bottom: 5rem;
+  margin-top: 3rem;
+}
+
+.color {
+  text-align: center;
+  background: #333333;
+  width: 14rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(255,255,255,5);
+}
+
+/*ローディング*/
+#loading {
+  background-color: #333333;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+}
+
+#loading-screen {
+  background-color: #ffffff;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  translate: 0 100vh;
+}
+
+#loading p {
+  font-size: 2rem;
+  font-family: "Yusei Magic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ===サイドバー=== */
+/* 開閉ボタン */
+.btn-menu {
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    z-index: 4;
+    padding: .5rem 1rem;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    transition: .4s;
+}
+.btn-menu svg {
+    fill: #ffffff;
+    margin-top: .25rem;
+    height: 2rem;
+    width: 2rem;
+}
+
+/* 閉じるボタン */
+#menu-close {
+    border: 1px solid #ffffff;
+}
+#menu-close svg {
+    fill: #ffffff;
+}
+
+/* スライドメニューパネル */
+#menu-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 4;
+    padding: 8rem 2rem 2rem;
+    width: max(32vw, 20rem);
+    height: 100vh;
+    background-color: #0f1111;
+    box-shadow: 0 0 2rem #ffffff;
+    font-family: "Sofia", serif;
+  font-weight: 400;
+  font-style: normal;
+    translate: 100vw;
+}
+.menu-list {
+    list-style: none;
+}
+.menu-list li {
+    margin: 1.5rem 0;
+    opacity: 0;
+}
+.menu-list a {
+    color: var(--light-green);
+    text-decoration: none;
+    font-size: 2rem;
+}
+

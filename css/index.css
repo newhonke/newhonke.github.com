@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+/* ヘッダー */
+.header {
+  text-align: center;
+  background-color: #0f1111;
+}
+
+.logo {
+  width: 100px;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.page-link {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  font-size: 1.5rem;
+  color: #ffffff;
+  gap: 2.5rem;
+  margin-bottom: 1rem;
+}    
+
+/* about */
+.about h3 {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.about-text-group {
+  margin: 1rem 3rem 0 3rem;
+  text-align: center;
+}
+
+.about p {
+  font-size: 1rem;
+  text-align: center;
+  display: inline-block;
+  text-align: left;
+}
+
+.count {
+  margin-top: 2rem;
+  text-align: center;
+}
+  
+/* デスクトップ版 */
+@media (min-width: 800px) {
+  .header-page {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1120px;
+    padding: 0 2rem;
+  }
+  
+  .page-link {
+    font-size: 3rem;
+    margin-top: 1rem;
+  }
+  
+  .logo {
+    width: 200px;
+    text-align: center;
+    margin-top: 2.5rem;
+  }
+}
