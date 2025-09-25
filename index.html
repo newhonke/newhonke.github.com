@@ -1,95 +1,74 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8">
-    <title>keyphoria</title>
-    <meta name="description" content="keyphoria">
-    <meta name="viewport" content="width=device-width, initial-scale+1">
-    
-    <!-- ファビコン -->
-    <link rel="icon" href="https://cdn.glitch.global/2ff683db-3ab9-4ff4-942e-1d1e46c57cc3/favicon.ico?v=1730099168783">
-
-    <!-- リセットcss -->
-    <link rel="stylesheet" href="https://unpkg.com/ress@5.0.2/dist/ress.min.css">
-
-    <!-- オリジナルcss -->
-    <link rel="stylesheet" href="css/list.css">
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/index.css">
-    
-    <link rel="stylesheet" href="css/js.css">
-    
-    <!-- js -->
-    <script src="../js/script.js" defer></script>
-    
-    <!-- フォント -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Noto+Serif+JP:wght@500&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Sofia&display=swap" rel="stylesheet">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Noto+Serif+JP:wght@500&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Sofia&display=swap" rel="stylesheet">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Ewert&family=Noto+Serif+JP:wght@500&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Sofia&family=Yusei+Magic&display=swap" rel="stylesheet">
+<head>
+  <meta charset="UTF-8">
+  <title>keyphoria</title>
+  <meta name="description" content="keyphoria">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PP9REREZ76"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <link rel="icon" href="https://cdn.glitch.global/2ff683db-3ab9-4ff4-942e-1d1e46c57cc3/favicon.ico?v=1730099168783">
 
-  gtag('config', 'G-PP9REREZ76');
-</script>
-  </head>
-  <body>
-    
-    
-    <div id="loading">
-      <p>ロードしてるYO!</p>
-      <div id="loading-screen"></div>
-    </div>
-    
-    <div class="body">
-      
-      <nav>
-        <button id="menu-open" class="btn-menu">
+  <link rel="stylesheet" href="https://unpkg.com/ress@5.0.2/dist/ress.min.css">
+
+  <link rel="stylesheet" href="css/list.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/js.css">
+  
+  <script src="js/script.js" defer></script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Ewert&family=Noto+Serif+JP:wght@500&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Sofia&family=Yusei+Magic&display=swap" rel="stylesheet">
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PP9REREZ76"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PP9REREZ76');
+  </script>
+</head>
+
+<body>
+  <div id="loading">
+    <p>ロードしてるYO!</p>
+    <div id="loading-screen"></div>
+  </div>
+  
+  <div class="body">
+    <nav>
+      <button id="menu-open" class="btn-menu">
+        <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <title>メニューを開く</title>
+          <path clip-rule="evenodd" d="m4.25 8c0-.41421.33579-.75.75-.75h14c.4142 0 .75.33579.75.75s-.3358.75-.75.75h-14c-.41421 0-.75-.33579-.75-.75zm0 4c0-.4142.33579-.75.75-.75h14c.4142 0 .75.3358.75.75s-.3358.75-.75.75h-14c-.41421 0-.75-.3358-.75-.75zm.75 3.25c-.41421 0-.75.3358-.75.75s.33579.75.75.75h14c.4142 0 .75-.3358.75-.75s-.3358-.75-.75-.75z" fill-rule="evenodd"/>
+        </svg>
+      </button>
+      <div id="menu-panel">
+        <button id="menu-close" class="btn-menu">
           <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-            <title>メニューを開く</title>
-            <path clip-rule="evenodd" d="m4.25 8c0-.41421.33579-.75.75-.75h14c.4142 0 .75.33579.75.75s-.3358.75-.75.75h-14c-.41421 0-.75-.33579-.75-.75zm0 4c0-.4142.33579-.75.75-.75h14c.4142 0 .75.3358.75.75s-.3358.75-.75.75h-14c-.41421 0-.75-.3358-.75-.75zm.75 3.25c-.41421 0-.75.3358-.75.75s.33579.75.75.75h14c.4142 0 .75-.3358.75-.75s-.3358-.75-.75-.75z" fill-rule="evenodd"/>
+            <title>メニューを閉じる</title>
+            <path clip-rule="evenodd" d="m7.53033 6.46967c-.29289-.29289-.76777-.29289-1.06066 0s-.29289.76777 0 1.06066l4.46963 4.46967-4.46963 4.4697c-.29289.2929-.29289.7677 0 1.0606s.76777.2929 1.06066 0l4.46967-4.4696 4.4697 4.4696c.2929.2929.7677.2929 1.0606 0s.2929-.7677 0-1.0606l-4.4696-4.4697 4.4696-4.46967c.2929-.29289.2929-.76777 0-1.06066s-.7677-.29289-1.0606 0l-4.4697 4.46963z" fill-rule="evenodd"/>
           </svg>
         </button>
-        <div id="menu-panel">
-          <button id="menu-close" class="btn-menu">
-            <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-              <title>メニューを閉じる</title>
-              <path clip-rule="evenodd" d="m7.53033 6.46967c-.29289-.29289-.76777-.29289-1.06066 0s-.29289.76777 0 1.06066l4.46963 4.46967-4.46963 4.4697c-.29289.2929-.29289.7677 0 1.0606s.76777.2929 1.06066 0l4.46967-4.4696 4.4697 4.4696c.2929.2929.7677.2929 1.0606 0s.2929-.7677 0-1.0606l-4.4696-4.4697 4.4696-4.46967c.2929-.29289.2929-.76777 0-1.06066s-.7677-.29289-1.0606 0l-4.4697 4.46963z" fill-rule="evenodd"/>
-            </svg>
-          </button>
-          <ul class="menu-list">
-            <li><a href="index.html">about</a></li>
-            <li><a href="blog.html">blog</a></li>
-            <li><a href="sns.html">sns</a></li>
-            <li><a href="others.html">others</a></li>
-          </ul>
-        </div>
-      </nav>
-      
-      
-      <div class="header">
-        <header class="header-page">
-          <a href="index.html"><img class="logo" src="https://cdn.glitch.global/4b845364-05f4-4a43-ae4d-80d19c646eed/JCqfiDiKX1te6GN1730533765_1730533773.png?v=1730533839925" alt="Keyphoriaのロゴ"></a>
-          <div class="count"> 
-            <img src="https://www.f-counter.net/j/64/1732864443/" alt="アクセスカウンター"><br><p>↑この人数がサイトを訪問しました↑</p>
-          </div>
-        </header>
+        <ul class="menu-list">
+          <li><a href="index.html">about</a></li>
+          <li><a href="blog.html">blog</a></li>
+          <li><a href="sns.html">sns</a></li>
+          <li><a href="others.html">others</a></li>
+        </ul>
       </div>
-      
-      
-      
+    </nav>
+    
+    <header class="header-page">
+      <a href="index.html"><img class="logo" src="https://cdn.glitch.global/4b845364-05f4-4a43-ae4d-80d19c646eed/JCqfiDiKX1te6GN1730533765_1730533773.png?v=1730533839925" alt="Keyphoriaのロゴ"></a>
+      <div class="count"> 
+        <img src="https://www.f-counter.net/j/64/1732864443/" alt="アクセスカウンター"><br><p>↑この人数がサイトを訪問しました↑</p>
+      </div>
+    </header>
+    
+    <main>
       <section class="about">
         <h3 class="font-english" id="about">about</h3>
         <div class="about-text-group">
@@ -99,36 +78,31 @@
             まだまだ更新していく予定です。
           </p>
         </div>
-      </section>       
-      
-      <!-- jsカラーピッかー -->
-      <aside>
-        <div class="color">
-          <p>背景色を変更</p>
-          <p id="colorText">カラーコードを検索</p>
-          <input id="colorPicker" type="color">
-        </div>
-        
-        <form action="#" id="form">
-          <input type="text" name="word">
-          <input type="submit" value="？">
-        </form>
-        
-              <div id="gage">
+      </section>
+    </main>
     
-  </div>
-      </aside>
+    <aside>
+      <div class="color">
+        <label for="colorPicker">背景色を変更</label>
+        <p id="colorText">カラーコードを検索</p>
+        <input id="colorPicker" type="color">
+      </div>
       
-      <footer>
-        <div class="copyright">
-          <small>&copy; 2024 Keyphoria</small>
-        </div>
-      </footer>
-      <script>
-        
-      </script>
-    </div>
-    <!--<a rel="me" href="https://handon.club/@honke">Mastodon</a> -->
+      <form action="#" id="form">
+        <label for="search-word" style="display: none;">検索</label>
+        <input type="text" name="word" id="search-word">
+        <input type="submit" value="？">
+      </form>
+      
+      <div id="gage"></div>
+    </aside>
+    
+    <footer>
+      <div class="copyright">
+        <small>&copy; 2024 Keyphoria</small>
+      </div>
+    </footer>
+
+  </div>
   </body>
 </html>
-
