@@ -1,16 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>楽園</title>
+    <style>
+        /* 基本的なスタイルリセットとページ全体のデザイン */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+            color: #fff; /* テキストの色を白に */
+            overflow: hidden; /* スクロールバーを非表示に */
+        }
+
+        /* パーティクルを描画する背景のスタイル */
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #0d1117; /* 背景色をダークブルーに */
+            z-index: -1; /* コンテンツの背面に配置 */
+        }
+
+        /* コンテンツを画面中央に配置するためのコンテナ */
+        .content-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+        }
+        
+        /* コンテンツ本体のスタイル */
+        .content {
+            padding: 30px 40px;
+            background-color: rgba(0, 0, 0, 0.6); /* 半透明の黒い背景 */
+            border-radius: 12px; /* 角を丸くする */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px); /* ガラスのようなすりガラス効果 */
+            z-index: 1;
+        }
+
+        /* タイトルのスタイル */
+        .content h1 {
+            margin-top: 0;
+            font-size: 3em;
+            letter-spacing: 3px;
+            text-shadow: 0 0 10px rgba(77, 166, 255, 0.7);
+        }
+
+        /* リンクのスタイル */
+        .content a {
+            display: block; /* リンクをブロック要素にして改行 */
+            margin-bottom: 15px; /* 各リンクの間隔 */
+            color: #4da6ff; /* リンクの色を明るい青に */
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+        }
+
+        .content a:hover {
+            color: #ffffff; /* ホバー時に白く */
+            transform: scale(1.05); /* 少しだけ拡大 */
+        }
+
+        /* 説明文のスタイル */
+        .content p {
+            line-height: 1.8;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
-    <p>
-        運営中のサイト<br>
-        <a href="https://omk.taki-hjac.jp/">misskey</a> オープンソースソフトウェアを使ったsnsです。招待コードが欲しいなら話しかけてください。<br>
-        <a href="https://flask-bbs-private.onrender.com/">Anonote</a> 自作の掲示板です。開発中。<br>
-        <a href="https://anosgame.onrender.com/">AnOS</a> 自作の音ゲーです。開発中
-    </p>
+    <div id="particles-js"></div>
+
+    <div class="content-wrapper">
+        <div class="content">
+            <h1>楽園</h1>
+            <p>運営中のサイト</p>
+            <a href="https://omk.taki-hjac.jp/" target="_blank" rel="noopener noreferrer">Misskey</a>
+            <a href="https://flask-bbs-private.onrender.com/" target="_blank" rel="noopener noreferrer">Anonote</a>
+            <a href="https://anosgame.onrender.com/" target="_blank" rel="noopener noreferrer">AnOS</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    
+    <script>
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 100, // パーティクルの数
+                    "density": { "enable": true, "value_area": 800 }
+                },
+                "color": { "value": "#ffffff" }, // パーティクルの色
+                "shape": { "type": "circle" },
+                "opacity": {
+                    "value": 0.5, "random": true,
+                    "anim": { "enable": true, "speed": 1, "opacity_min": 0.1, "sync": false }
+                },
+                "size": {
+                    "value": 3, "random": true,
+                    "anim": { "enable": false }
+                },
+                "line_linked": {
+                    "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1
+                },
+                "move": {
+                    "enable": true, "speed": 2, // 動く速さ
+                    "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": { "enable": true, "mode": "repulse" }, // マウスホバーで粒子が逃げる
+                    "onclick": { "enable": true, "mode": "push" },    // クリックで粒子を追加
+                    "resize": true
+                },
+                "modes": {
+                    "repulse": { "distance": 100, "duration": 0.4 },
+                    "push": { "particles_nb": 4 }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
 </body>
 </html>
