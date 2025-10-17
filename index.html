@@ -24,13 +24,14 @@
             z-index: -1; /* コンテンツの背面に配置 */
         }
 
-        /* コンテンツを画面中央に配置するためのコンテナ */
+/* コンテンツを画面中央に配置するためのコンテナ */
         .content-wrapper {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100%;
             text-align: center;
+            pointer-events: none; /* この行を追加 */
         }
         
         /* コンテンツ本体のスタイル */
@@ -41,6 +42,7 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(5px); /* ガラスのようなすりガラス効果 */
             z-index: 1;
+            pointer-events: auto; /* この行を追加 */
         }
 
         /* タイトルのスタイル */
