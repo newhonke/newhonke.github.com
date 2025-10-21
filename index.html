@@ -1,103 +1,110 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>学校法人 楽学園</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nakashima Holdings — Independent Internet Services</title>
+  <meta name="description" content="Webとメディアを中心に、個人でプロジェクトを企画・開発しています。独立したクリエイターによる実験的な活動拠点です。" />
+  <meta name="theme-color" content="#0D0B14" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- ===== ヘッダー ===== -->
-  <header class="site-header">
-    <div class="top-bar">
-      <div class="container">
-        <div class="header-left">
-          <a href="index.html">
-            <img src="logo.png" alt="楽学園ロゴ" class="header-logo">
-          <div class="header-text">
-            <h1>学校法人 楽学園</h1>
-            <p>楽中学校・楽高等学校</p>
-            <span>FAKE Junior High School & FAKE Senior High School</span>
-          </div>
-          </a>
+  <div class="wrap" role="main">
+    <header>
+      <a class="brand" href="#" aria-label="Nakashima Holdings トップ">
+        <div class="logo" aria-hidden="true"><img src="images/logo.png"></img></div>
+        <div>
+          <h1>Nakashima Holdings</h1>
+          <p>Independent Internet Services</p>
         </div>
-        <div class="header-right">
-          <ul>
-            <li><i class="ri-building-line"></i> 保護者の方へ</li>
-            <li><i class="ri-graduation-cap-line"></i> 卒業生の皆様</li>
-            <li><i class="ri-plant-line"></i> 寄付金について</li>
-            <li><i class="ri-lock-line"></i> 学内専用</li>
-          </ul>
+      </a>
+
+      <nav aria-label="主なページ">
+        <a class="nav-link" href="#services">about</a>
+        <a class="nav-link" href="#about">services</a>
+        <a class="nav-link" href="#news">news</a>
+        <a class="nav-link" href="#contact">contact</a>
+      </nav>
+    </header>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-left">
+        <div class="eyebrow">INDIE · INFRA · WEB</div>
+        <h2 id="hero-title">ミートソース、ボロニア風</h2>
+        <p>Webとメディアを中心に、個人でプロジェクトを企画・開発しています。独立したクリエイターによる実験的な活動拠点です。</p>
+        <div class="cta-group" role="group" aria-label="主要アクション">
+          <button class="btn" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">事業内容を見る</button>
+          <button class="btn secondary" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">運営情報</button>
         </div>
       </div>
-    </div>
 
-    <nav class="main-nav">
-      <ul>
-        <li><a href="info.html">学校案内</a></li>
-        <li><a href="#">楽中学校</a></li>
-        <li><a href="#">楽高等学校</a></li>
-        <li><a href="#">進路・進学</a></li>
-        <li><a href="#">入試情報</a></li>
-      </ul>
-    </nav>
-  </header>
+      <aside class="panel" aria-label="プロモ">
+        <h3>Latest</h3>
+        <p>Misskeyサーバー「幼女様達のお茶会」ベータ公開中 — 金銭的な問題で現在招待コード中</p>
+        <div style="height:12px"></div>
+        <h3>Stats</h3>
+        <p>稼働中プロジェクト：3 / コード公開済み：2</p>
+      </aside>
+    </section>
 
-  <!-- ===== メインビジュアル ===== -->
-  <section class="hero">
-    <img src="kousya.jpg" alt="校舎画像" class="hero-img">
-    <div class="hero-text">
-      <h2>すべては一人ひとりの<br>生徒のために</h2>
-    </div>
-  </section>
+    <!-- Services -->
+    <section id="services" aria-labelledby="services-title">
+      <h3 id="services-title" class="section-title">PROJECTS</h3>
+      <div class="services">
+        <a class="card" href="https://flask-bbs-private.onrender.com/" target="_blank">
+        <h4>Anonote</h4>
+        <p>匿名で思考を共有するためのシンプルかつ高速な掲示板プラットフォーム。</p>
+        </a>
 
-  <!-- ===== ボタンリンク ===== -->
-  <section class="link-section">
-    <div class="link-grid">
-      <a href="kihu.html" class="link-card">寄付金のお願い</a>
-      <a href="#" class="link-card">楽学園同窓会</a>
-      <a href="#" class="link-card">楽学園図書館</a>
-      <a href="#" class="link-card">楽技術研究所</a>
-    </div>
-  </section>
+        <a class="card" href="https://anosgame.onrender.com/" target="_blank">
+        <h4>AnOS</h4>
+        <p>ブラウザ上で完結する音ゲー兼譜面エディター。</p>
+        </a>
 
-  <!-- ===== お知らせ ===== -->
-  <section class="news">
-    <div class="container">
-      <h3>お知らせ</h3>
-      <ul>
-        <li><span>2025.10.10</span>　学校説明会のご案内を掲載しました。</li>
-        <li><span>2025.09.28</span>　文化祭が開催されました。</li>
-        <li><span>2025.09.10</span>　入試要項を公開しました。</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ===== フッター ===== -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <img src="logo.png" alt="楽学園ロゴ" class="footer-logo">
-      <div class="footer-text">
-        <h2>学校法人 楽学園</h2>
-        <p>楽中学校・楽高等学校</p>
-        <p class="address">〒839-2127 新潟市港南区東町米亀田11番地<br>
-          TEL (2025)10-0018 / FAX (2023)11-1438</p>
+        <a class="card" href="https://omk.taki-hjac.jp/" target="_blank">
+        <h4>幼女様達のお茶会</h4>
+        <p>MisskeyをベースにしたSNSサーバー。現在は招待コード制。</p>
+        </a>
       </div>
-    </div>
+    </section>
 
-    <div class="footer-links">
-      <a href="#">学内専用</a>
-      <a href="#">保護者の方へ</a>
-      <a href="#">卒業生の皆様</a>
-      <a href="#">寄付金について</a>
-      <a href="#">採用情報</a>
-      <a href="#">アクセス</a>
-    </div>
 
-    <p class="copyright">
-      Copyright © 楽中学・楽高等学校 All rights reserved.
-    </p>
-  </footer>
+    <!-- About / Vision -->
+    <section id="about" class="about" aria-labelledby="about-title">
+      <div class="text">
+        <h3 id="about-title">運営について</h3>
+        <p><strong>運営者：</strong>鵺帝</p>
+        <p><strong>開始：</strong>2025年</p>
+        <p>本サイトは個人プロジェクトとして運営されています。法人格は有しておりません。</p>
+      </div>
+    </section>
+
+    <!-- News -->
+    <section id="news" class="news" aria-labelledby="news-title">
+      <h3 id="news-title">ニュース</h3>
+
+      <article class="news-item" aria-labelledby="n1">
+        <div>
+          <a id="n1" href="#">まだありません。</a>
+          <div style="color:rgba(232,230,239,0.6);font-size:13px">まだありません。</div>
+        </div>
+        <time datetime="2025-10-01">null</time>
+      </article>
+
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" aria-labelledby="contact-title" style="margin-bottom:36px">
+      <h3 id="contact-title">コンタクト</h3>
+      <p>お問い合わせ先：<a href="https://omk.taki-hjac.jp/@honke" style="color:var(--muted-2)">https://omk.taki-hjac.jp/@honke</a>（個人運営のため返信に時間がかかる場合があります）</p>
+    </section>
+
+    <footer>
+      <div>© 2025 Nakashima Holdings</div>
+      <div style="text-align:right">本サイトは個人により運営されています。法人格は有しておりません。</div>
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

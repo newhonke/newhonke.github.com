@@ -1,0 +1,277 @@
+:root{
+    --bg:#0D0B14;
+    --bg-2:#1B1230;
+    --accent:#6C4BC5;
+    --accent-2:#9A7FF0;
+    --muted:#E8E6EF;
+    --muted-2:#C8AFFF;
+    --card:#0F0D16;
+    --glass: rgba(255,255,255,0.03);
+    --radius:14px;
+    --maxw:1100px;
+    font-family: Inter, "Hiragino Kaku Gothic ProN", "Noto Sans JP", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Reset-ish */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+    margin:0;
+    background: radial-gradient(1200px 600px at 10% 10%, rgba(108,75,197,0.12), transparent),
+                linear-gradient(180deg,var(--bg) 0%, var(--bg-2) 100%);
+    background-attachment: fixed;
+    color:var(--muted);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    line-height:1.6;
+    letter-spacing:0.01em;
+    padding:40px 20px;
+    display:flex;
+    justify-content:center;
+}
+
+.wrap{width:100%;max-width:var(--maxw);}
+
+header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+    margin-bottom:36px;
+}
+
+.brand{
+    display:flex;
+    gap:12px;
+    align-items:center;
+    text-decoration:none;
+    color:var(--muted);
+}
+.logo {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 18px rgba(108, 75, 197, 0.18),
+                inset 0 -6px 12px rgba(255, 255, 255, 0.03);
+    font-weight: 700;
+    color: white;
+    font-size: 18px;
+    flex-shrink: 0;
+    overflow: hidden; /* ← はみ出しを防ぐ */
+}
+.logo img {
+    width: 105%;
+    height: 105%;
+    object-fit: contain; /* ← アスペクト比を維持して中に収める */
+    display: block;
+}
+.brand h1{font-size:18px;margin:0}
+.brand p{margin:0;font-size:12px;color:rgba(232,230,239,0.75)}
+
+nav{display:flex;gap:12px;align-items:center}
+.nav-link{
+    color:var(--muted);
+    text-decoration:none;
+    padding:8px 12px;
+    border-radius:8px;
+    font-size:14px;
+}
+.nav-link:hover{background:rgba(255,255,255,0.02); color:var(--muted-2)}
+
+/* Hero */
+.hero{
+    display:grid;
+    grid-template-columns: 1fr 380px;
+    gap:32px;
+    align-items:center;
+    margin-bottom:48px;
+}
+.hero-left h2{
+    font-size:40px;
+    margin:0 0 12px 0;
+    color:linear-gradient(90deg,var(--muted),var(--muted-2));
+}
+.eyebrow{
+    display:inline-block;
+    font-size:12px;
+    color:var(--accent-2);
+    padding:6px 10px;
+    border-radius:999px;
+    background:rgba(154,127,240,0.06);
+    margin-bottom:12px;
+    letter-spacing:0.08em;
+}
+.hero-left p{margin:0 0 20px 0; color:rgba(232,230,239,0.86)}
+.cta-group{display:flex;gap:12px;flex-wrap:wrap}
+
+.btn{
+    border:0;
+    padding:12px 16px;
+    background:linear-gradient(90deg,var(--accent),var(--accent-2));
+    color:white;
+    font-weight:600;
+    border-radius:10px;
+    cursor:pointer;
+    box-shadow:0 8px 28px rgba(108,75,197,0.18);
+}
+.btn.secondary{
+    background:transparent;
+    border:1px solid rgba(255,255,255,0.06);
+    color:var(--muted);
+}
+.btn.secondary:hover{background:rgba(255,255,255,0.02)}
+
+/* right panel - stats or promo */
+.panel{
+    background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border-radius:14px;
+    padding:18px;
+    box-shadow: 0 6px 30px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+    border:1px solid rgba(255,255,255,0.03);
+}
+.panel h3{margin:0 0 8px 0}
+.panel p{margin:0;color:rgba(232,230,239,0.8);font-size:14px}
+
+/* Services cards */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+  margin: 0 auto 48px;
+  padding: 0 24px; /* ← これを追加 */
+  max-width: var(--maxw);
+  box-sizing: border-box;
+  align-items: stretch;
+}
+/* カードリンクのホバー強化 */
+.card {
+  text-decoration: none;
+  background: var(--card);
+  border-radius: 12px;
+  padding: 18px;
+  border: 1px solid rgba(255,255,255,0.03);
+  transition: transform .25s ease, box-shadow .25s ease;
+  display: flex;              /* ← 追加 */
+  flex-direction: column;     /* ← 追加 */
+  justify-content: space-between; /* ← 追加 */
+}
+.card:hover{
+    transform:translateY(-8px) scale(1.01);
+    box-shadow:0 18px 40px rgba(108,75,197,0.14);
+    border-color: rgba(156,120,240,0.18);
+}
+.card h4{margin:0 0 8px 0;color:var(--muted-2)}
+.card p{margin:0;color:rgba(232,230,239,0.78);font-size:14px}
+
+/* Vision / About */
+.about{
+    display:flex;
+    gap:24px;
+    align-items:flex-start;
+    margin-bottom:48px;
+}
+.about .text{flex:1}
+.about .visual{
+    width:320px;height:200px;border-radius:12px;
+    background: radial-gradient(circle at 60% 40%, rgba(108,75,197,0.15), transparent 70%);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--muted-2);
+    font-weight:700;
+    border:1px solid rgba(255,255,255,0.02);
+    font-size: 24px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* News list */
+.news{
+    margin-bottom:48px;
+}
+.news-item{
+    padding:14px;
+    border-radius:10px;
+    display:flex;justify-content:space-between;gap:12px;
+    align-items:center;
+    background:linear-gradient(90deg, transparent, rgba(255,255,255,0.01));
+    border:1px solid rgba(255,255,255,0.02);
+    margin-bottom:10px;
+}
+.news-item time{font-size:13px;color:rgba(232,230,239,0.6)}
+.news-item a{color:var(--muted-2); text-decoration:none; font-weight:600;}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* 小画面でも崩れにくく */
+  padding: 24px 20px;
+  margin-top: 40px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, rgba(108,75,197,0.12), rgba(154,127,240,0.06));
+  color: rgba(232,230,239,0.6);
+  font-size: 13px;
+  gap: 12px;
+}
+
+.footer-left, .footer-right {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+section {
+  background: rgba(255,255,255,0.01);
+  border-radius: 12px;
+  padding: 32px 24px;
+  margin-bottom: 48px;
+  border: 1px solid rgba(255,255,255,0.02);
+  max-width: var(--maxw);
+  margin-left: 0; /* 左寄せ */
+}
+
+.section-title {
+  font-size: 12px;
+  color: var(--accent-2);
+  letter-spacing: 0.12em;
+  margin: 0 0 18px 4px;
+  text-align: left;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+  justify-items: start; /* ← 各カードを左寄せ */
+  text-align: left;     /* ← テキストも左寄せ */
+}
+
+.services::before {
+  display: block;
+  font-size: 12px;
+  color: var(--accent-2);
+  margin-bottom: 8px;
+  letter-spacing: 0.1em;
+}
+
+/* Responsive */
+@media (max-width:980px){
+    .hero{grid-template-columns:1fr}
+    .services{grid-template-columns:repeat(2,1fr)}
+    .about{flex-direction:column}
+}
+@media (max-width:640px){
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-right {
+    text-align: center;
+  }
+}
