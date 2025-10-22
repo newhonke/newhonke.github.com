@@ -3,8 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>[サイト名] — [サイトのサブタイトル]</title>
-  <meta name="description" content="[サイトの説明文。Webとメディアを中心に、個人でプロジェクトを企画・開発しています。]" />
+  <title>[サイト名]</title>
   <meta name="theme-color" content="#0D0B14" />
   <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -26,7 +25,6 @@
       <nav aria-label="主なページ">
         <a class="nav-link" href="#services">Services</a>
         <a class="nav-link" href="#about">About</a>
-        <a class="nav-link" href="#news">News</a>
         <a class="nav-link" href="#contact">Contact</a>
       </nav>
     </header>
@@ -35,7 +33,7 @@
       <div class="hero-left">
         <div class="eyebrow">[カテゴリタグなど (例: INDIE · WEB)]</div>
         <h2 id="hero-title">[メインキャッチコピー]</h2>
-        <p>[サイトの概要やミッション。Webとメディアを中心に、個人でプロジェクトを企画・開発しています。独立したクリエイターによる実験的な活動拠点です。]</p>
+        <p>[サイトの概要やミッション。]</p>
         <div class="cta-group" role="group" aria-label="主要アクション">
           <button class="btn" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">サービス一覧</button>
           <button class="btn secondary" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">運営情報</button>
@@ -73,29 +71,11 @@
         </div>
     </section>
 
-    <section id="news" class="news" aria-labelledby="news-title">
-      <h2 id="news-title">News</h2>
-      
-      <article class="news-item" aria-labelledby="n1">
-        <div>
-          <a id="n1" href="[記事URL]">[ニュース記事のタイトル]</a>
-          <div class="news-meta">[記事の概要やカテゴリなど]</div>
-        </div>
-        <time datetime="[YYYY-MM-DD]">[日付 (例: 2025.10.22)]</time>
-      </article>
-      </section>
-
     <section id="contact" aria-labelledby="contact-title">
       <h2 id="contact-title">Contact</h2>
       <p>
         お問い合わせ: 
         <a href="[連絡先URL (例: X, Misskey, GitHub)]" class="contact-link" target="_blank" rel="noopener noreferrer">[連絡先URL または サービス名]</a>
-        <br>
-        <small>（個人運営のため返信に時間がかかる場合があります）</small>
-      </p>
-      <p>
-        ポートフォリオ: 
-        <a href="[プロフサイトURL]" class="contact-link" target="_blank" rel="noopener noreferrer">[プロフサイトURL]</a>
       </p>
     </section>
 
