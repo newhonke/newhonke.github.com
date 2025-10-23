@@ -4,18 +4,20 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title id="page-title"></title>
+  
   <meta name="theme-color" content="#0D0B14" />
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/logo.png">
   <link rel="stylesheet" href="css/style.css" />
 
   <style>
     .logo {
       transition: transform 0.3s ease;
     }
-    /* ロゴに 'active' クラスが付いたら浮き上がる */
     .logo.active {
       transform: translateY(-4px);
     }
-    /* サブタイトルに 'blinking' クラスが付いたら点滅 */
     #site-subtitle.blinking {
       animation: blink 0.8s ease-in-out infinite;
     }
@@ -30,7 +32,7 @@
   <main class="wrap">
     
     <header>
-      <a class="brand" href="/" aria-label="[サイト名] トップ" id="brand-link">
+      <a class="brand" href="/" aria-label="" id="brand-link">
         <div class="logo" aria-hidden="true">
           <img src="images/logo.png" alt="">
         </div>
@@ -39,7 +41,6 @@
           <p id="site-subtitle"></p>
         </div>
       </a>
-
       <nav aria-label="主なページ">
         <a class="nav-link" href="#services">Services</a>
         <a class="nav-link" href="#about">About</a>
@@ -57,7 +58,6 @@
           <button class="btn secondary" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">運営情報</button>
         </div>
       </div>
-
       <aside class="panel" aria-label="プロモーション">
         <h3>Latest</h3>
         <p>[最新情報やプロモーションテキストをここに入力 (例: 新サービス「〇〇」を公開しました)]</p>
@@ -69,7 +69,6 @@
     <section id="services" aria-labelledby="services-title">
       <h2 id="services-title" class="section-title">Services</h2>
       <div class="services">
-        
         <a class="card" href="[サービスURL]" target="_blank" rel="noopener noreferrer">
           <h3>[サービス名]</h3>
           <p>[サービスの説明文を簡潔に入力]</p>
