@@ -3,22 +3,40 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title></title>
+  <title id="page-title">[サイト名]</title>
   <meta name="theme-color" content="#0D0B14" />
   <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    .logo {
+      transition: transform 0.3s ease;
+    }
+    /* ロゴに 'active' クラスが付いたら浮き上がる */
+    .logo.active {
+      transform: translateY(-4px);
+    }
+    /* サブタイトルに 'blinking' クラスが付いたら点滅 */
+    #site-subtitle.blinking {
+      animation: blink 0.8s ease-in-out infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+  </style>
   </head>
 <body>
 
   <main class="wrap">
     
     <header>
-      <a class="brand" href="/" aria-label="[サイト名] トップ">
+      <a class="brand" href="/" aria-label="[サイト名] トップ" id="brand-link">
         <div class="logo" aria-hidden="true">
           <img src="images/logo.png" alt="">
         </div>
         <div>
-          <h1>[サイト名]</h1>
-          <p>[サイトのサブタイトル]</p>
+          <h1 id="site-title">[サイト名]</h1>
+          <p id="site-subtitle">[サイトのサブタイトル]</p>
         </div>
       </a>
 
@@ -80,10 +98,11 @@
     </section>
 
     <footer>
-      <div>© [発行年] [サイト名]</div>
+      <div id="copyright">© [発行年] [サイト名]</div>
       <div class="footer-note">本サイトは個人により運営されています。法人格は有しておりません。</div>
     </footer>
 
-  </main> <script src="js/main.js"></script>
+  </main> 
+  <script src="js/main.js"></script>
 </body>
 </html>
